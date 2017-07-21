@@ -41,8 +41,8 @@ function getTotalToppingCosts(toppings){
   });
   return totalToppingCosts.toFixed(2);
 }
-function Pizza (id, size, toppings) {
-  this.id = id;
+function Pizza (name, size, toppings) {
+  this.name = name;
   this.size = size;
   this.toppings = toppings;
   this.delivery = 0;
@@ -53,6 +53,8 @@ Pizza.prototype.getPizzaCost = function(){
 };
 
 //-------------------FRONT END----------------------------
+var pizzaNum = 0;
+var orderTotal = 0.00;
 $(document).ready(function() {
   $("#pizza-order").submit(function(event) {
     event.preventDefault();
@@ -65,16 +67,18 @@ $(document).ready(function() {
     });
 
     //when you place an order a new Pizza is made
-    var newPizza = new Pizza ("pizza1", inputSize, inputToppings);
+    pizzaNum += 1;
+    var newPizza = new Pizza ("pizza"+pizzaNum, inputSize, inputToppings);
+    orderTotal += parseFloat(newPizza.getPizzaCost());
 
     $(".order-summary").show();
-    $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.id + "</span></li>");
-    $("#order-total-cost").text(newPizza.getPizzaCost());
+    $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.name + "</span></li>");
+    $("#order-total-cost").text(orderTotal.toFixed(2));
 
     // Click on the Pizza for the order information
     $(".pizza").last().click(function() {
       $("#show-pizza").show();
-      $("#show-pizza h2").text(newPizza.id);
+      $("#show-pizza h3").text(newPizza.name);
       $("#size").text(inputSize);
       $("#toppings").text(inputToppings);
       $("#size-cost").text(getSizeCost(inputSize));
