@@ -43,11 +43,9 @@ $(document).ready(function() {
 
     $(".order-summary").show();
     $("#size").text(inputSize);
+    $("#size-cost").text(getSizeCost(inputSize));
     $("#toppings").text(inputToppings);
-    $("#cost").text(getSizeCost(inputSize));
-    alert(getToppingCost(inputToppings[0]));
-
-
+    $("#toppings-cost").text(getToppingCost(inputToppings[0]));
 
   });
 });
