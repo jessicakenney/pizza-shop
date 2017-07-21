@@ -16,10 +16,11 @@
         <div class="col-md-6">
 
           <form id="pizza-order" >
+
             <p> What size pizza would you like ?</p>
             <div class="radio">
               <label>
-                <input type="radio" id="" value="small" name="size">
+                <input type="radio" id="" value="small" name="size" checked="true">
                   Small
               </label>
             </div>
@@ -35,6 +36,17 @@
                  Large
               </label>
             </div>
+
+            <div class="toppings">
+
+              <p>Pick your favorite toppings:</p>
+              <input type="checkbox" name="toppings" value="basil"> Basil<br>
+              <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
+            </div>
+
+
+            <br>
             <button type="submit" class="btn">Place Order</button>
           </form>
 

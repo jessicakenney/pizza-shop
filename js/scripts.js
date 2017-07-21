@@ -27,10 +27,15 @@ $(document).ready(function() {
 
 //-------------------FRONT END----------------------------
   // Retrieve user input
+    var inputToppings = [];
     var inputSize = $("input:radio[name=size]:checked").val();
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      inputToppings.push($(this).val());
+    });
 
     alert(inputSize);
     alert(getCost(inputSize));
+    alert(inputToppings);
 
 
 
