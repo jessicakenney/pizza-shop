@@ -1,0 +1,13 @@
+#show-pizza  {
+  display: none;
+}
+.order-summary  {
+  display: none;
+}
+.pizza {
+  cursor: pointer;
+  color: blue;
+}
+.pizza:hover {
+  text-decoration: underline;
+}
