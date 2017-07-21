@@ -9,23 +9,37 @@ function Topping (type,cost){
 }
 function getSizeCost (size){
   if (size === "small"){
-    return small.cost;
+    return small.cost.toFixed(2);
   } else if (size ===  "medium"){
-    return medium.cost;
+    return medium.cost.toFixed(2);
   } else {
-    return large.cost;
+    return large.cost.toFixed(2);
   }
 }
-function getToppingCost (topping){
-  if (topping === "basil"){
-    alert("basil hi");
-    return basil.cost;
-  }
+function getTotalToppingCosts(toppings){
+  var totalToppingCosts = 0;
+  toppingCosts = toppings.map(function(topping){
+    switch (topping) {
+      case "basil":
+        cost = basil.cost;
+        break;
+      case "pepperoni":
+        cost = pepperoni.cost;
+        break;
+    }
+    return cost;
+  });
+  alert("toppingCosts: " + toppingCosts)
+  toppingCosts.forEach(function(cost){
+    totalToppingCosts += cost;
+  });
+  return totalToppingCosts.toFixed(2);
 }
-var small = new PizzaSize(small,"8.00");
-var medium = new PizzaSize(medium,"12.00");
-var large = new PizzaSize(large,"18.00");
-var basil = new Topping(basil,"1.00");
+var small = new PizzaSize(small,8.00);
+var medium = new PizzaSize(medium,12.00);
+var large = new PizzaSize(large,18.00);
+var basil = new Topping(basil,1.00);
+var pepperoni = new Topping(pepperoni,1.50);
 
 var sizes = [small,medium,large];
 
@@ -45,7 +59,7 @@ $(document).ready(function() {
     $("#size").text(inputSize);
     $("#size-cost").text(getSizeCost(inputSize));
     $("#toppings").text(inputToppings);
-    $("#toppings-cost").text(getToppingCost(inputToppings[0]));
+    $("#toppings-cost").text(getTotalToppingCosts(inputToppings));
 
   });
 });
