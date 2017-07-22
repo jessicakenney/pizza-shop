@@ -1,14 +1,14 @@
-# movie-tickets
+# Pizza-Shop
+### Intro to Programming Independent Project for Epicodus Week 4, 07.21.2017
 
-##### Epicodus Section: JavaScript OO - Movie Tickets
-
-#### By Epicodus Lessons
+#### By Jessica Sheridan
 
 ## Description
 
 This application will provide a pizza company an order form where a user can choose
 one or more individual toppings and a pizza size to place an order and display the
-final cost.
+final cost. The user can submit any number of pizzas and the individual pizza details
+can be shown along with the total cost.
 
 
 ## Specifications:
@@ -23,33 +23,16 @@ final cost.
 |6. outputs shows total cost of two items selected| basil, mushroom | [2.00] |
 |7. outputs shows total cost of pizza plus toppings | basil, mushroom | [12.00] |
 
-## Setup
+## Setup/Installation Requirements
+Clone GitHub Repository:
+git clone https://github.com/jessicakenney/pizza-shop.git
 
+## Support and contact details
+*email jessicakenney@yahoo.com* with any questions.
 
 ## Technologies Used
-
 JavaScript and jQuery
 
-### Legal
-
-Copyright (c) 2015 **Epicodus**
-
-This software is licensed under the MIT license.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+### Legal/License
+This software is licensed under MIT
+Copyright (c) 2017 Jessica Sheridan
