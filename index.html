@@ -11,21 +11,34 @@
   <body>
     <div class="sidebar">
       <img src=css/pizza.jpg alt="pizza yum" class="pizza-img">
+      <div class="order-summary">
+        <h3>Summary:</h3>
+        <h4>Pizzas</h4>
+        <ul id="pizzas">
+        </ul>
+        <p><strong>Total Order Cost : </strong><span id = "order-total-cost"></span></p>
+      </div>
+      <br>
       <div id="show-pizza">
         <h4></h4>
         <p><strong>Size : </strong><span id = "size"></span><span class="subtotal" id="size-cost"></span></p>
         <p><strong>Toppings : </strong><span id = "toppings"></span><span class="subtotal" id="toppings-cost"></span></p>
         <p><strong>Pizza Cost : ...</strong><span id = "pizza-total-cost"></span></p>
+        <br>
+        <p><em>Thanks for visiting! See ya next time...</em></p>
       </div>
     </div>
     <div class="title">
       <h1>farmer's market pizza</h1>
     </div>
     <img src=css/farmstand.jpg alt="freshveges" class="veges">
+    <div class="delivery">
+      <img src=css/bike.jpg alt="zoomzoom" class="bike"><em>Delivery coming soon!</em>
+    </div>
     <div class="box">
       <form id="pizza-order" >
         <h2>Order Here</h2>
-        <p> What size pizza would you like ?</p>
+        <p><strong>What size pizza would you like ?</strong></p>
         <div class="radio">
           <label>
             <input type="radio" id="" value="small" name="size" checked="true">
@@ -45,21 +58,26 @@
           </label>
         </div>
         <div class="toppings">
-          <p>Pick your favorite toppings:</p>
+          <p><strong>Pick all your favorite toppings:</strong></p>
+          <p><em>Cheese</em></p>
+          <input type="checkbox" name="toppings" value="mozz"> Fresh Mozzarella<br>
+          <input type="checkbox" name="toppings" value="goat"> Goat Cheese<br>
+          <input type="checkbox" name="toppings" value="asiago"> Asiago<br>
+          <br>
+          <p><em>Greens</em></p>
           <input type="checkbox" name="toppings" value="basil"> Basil<br>
+          <input type="checkbox" name="toppings" value="tomato"> Tomatoes<br>
+          <input type="checkbox" name="toppings" value="arugula"> Arugula<br>
+          <br>
+          <p><em>Meat</em></p>
           <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
-          <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
+          <input type="checkbox" name="toppings" value="bacon"> Bacon<br>
+          <input type="checkbox" name="toppings" value="pancetta"> Pancetta<br>
         </div>
         <br>
         <button type="submit" class="btn">Add Pizza </button>
       </form>
-      <div class="order-summary">
-        <h2>Order Summary:</h2>
-        <h4>Pizzas</h4>
-        <ul id="pizzas">
-        </ul>
-        <p><strong>Total Order Cost : </strong><span id = "order-total-cost"></span></p>
-      </div>
     </div>
+      <p>Jessica Sheridan 7.21.2017, Epicodus Week4 Independent Project</p>
   </body>
 </html>

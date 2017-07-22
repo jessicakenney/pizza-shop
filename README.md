@@ -30,6 +30,13 @@ git clone https://github.com/jessicakenney/pizza-shop.git
 ## Support and contact details
 *email jessicakenney@yahoo.com* with any questions.
 
+## Known Issues/Bugs
+Images and Additional Styling added after 5pm deadline. Additional toppings
+also included while the functionality remained intact.
+
+In the Summary Sidebar, the 'Toppings' details runs into the main box 
+ when there are many toppings selected for a given pizza.
+
 ## Technologies Used
 JavaScript and jQuery
 
