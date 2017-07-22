@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -8,71 +9,54 @@
     <title>Pizza Shop</title>
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Harvest Pizza</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-
-          <form id="pizza-order" >
-
-            <p> What size pizza would you like ?</p>
-            <div class="radio">
-              <label>
-                <input type="radio" id="" value="small" name="size" checked="true">
-                  Small
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" id="" value="medium" name="size">
-                 Medium
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" id="" value="large" name="size">
-                 Large
-              </label>
-            </div>
-
-            <div class="toppings">
-
-              <p>Pick your favorite toppings:</p>
-              <input type="checkbox" name="toppings" value="basil"> Basil<br>
-              <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
-              <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
-            </div>
-
-
-            <br>
-            <button type="submit" class="btn">Add Pizza </button>
-          </form>
-          <div class="order-summary">
-            <h2>Order Summary:</h2>
-            <h4>Pizzas</h4>
-            <ul id="pizzas">
-
-            </ul>
-            <p><strong>Total Cost : </strong><span id = "order-total-cost"></span></p>
-
-
-
-          </div>
-
-
-        </div>
-        <div class="col-md-6">
-          <div id="show-pizza">
-            <h3></h3>
-            <p><strong>Size : </strong><span id = "size"></span><span class="subtotal" id="size-cost"></span></p>
-            <p><strong>Toppings : </strong><span id = "toppings"></span><span class="subtotal" id="toppings-cost"></span></p>
-            <p><strong>Total Cost : </strong><span id = "pizza-total-cost"></span></p>
-          </div>
-
+    <div class="sidebar">
+      <div id="show-pizza">
+        <h4></h4>
+        <p><strong>Size : </strong><span id = "size"></span><span class="subtotal" id="size-cost"></span></p>
+        <p><strong>Toppings : </strong><span id = "toppings"></span><span class="subtotal" id="toppings-cost"></span></p>
+        <p><strong>Pizza Cost : ...</strong><span id = "pizza-total-cost"></span></p>
       </div>
     </div>
-
+    <div class="title">
+      <h1>farmstand pizza</h1>
+    </div>
+    <div class="box">
+      <form id="pizza-order" >
+        <p> What size pizza would you like ?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" id="" value="small" name="size" checked="true">
+              Small
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="" value="medium" name="size">
+             Medium
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="" value="large" name="size">
+             Large
+          </label>
+        </div>
+        <div class="toppings">
+          <p>Pick your favorite toppings:</p>
+          <input type="checkbox" name="toppings" value="basil"> Basil<br>
+          <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
+        </div>
+        <br>
+        <button type="submit" class="btn">Add Pizza </button>
+      </form>
+      <div class="order-summary">
+        <h2>Order Summary:</h2>
+        <h4>Pizzas</h4>
+        <ul id="pizzas">
+        </ul>
+        <p><strong>Total Order Cost : </strong><span id = "order-total-cost"></span></p>
+      </div>
+    </div>
   </body>
 </html>

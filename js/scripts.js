@@ -5,6 +5,7 @@ var medium = new PizzaSize(medium,12.00);
 var large = new PizzaSize(large,18.00);
 var basil = new Topping(basil,1.00);
 var pepperoni = new Topping(pepperoni,1.50);
+var mushrooms = new Topping(mushrooms,1.00);
 
 function PizzaSize (type,cost){
   this.type = type;
@@ -66,28 +67,25 @@ $(document).ready(function() {
       inputToppings.push($(this).val());
     });
 
-    //when you place an order a new Pizza is made
+    // When you place an order a new Pizza is made and cost added to Order
     pizzaNum += 1;
     var newPizza = new Pizza ("pizza"+pizzaNum, inputSize, inputToppings);
     orderTotal += parseFloat(newPizza.getPizzaCost());
 
+    // In Order Summary show list of pizza and Order Total
     $(".order-summary").show();
     $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.name + "</span></li>");
-    $("#order-total-cost").text(orderTotal.toFixed(2));
+    $("#order-total-cost").text(" $"+orderTotal.toFixed(2));
 
-    // Click on the Pizza for the order information
+    // Click on the Pizza for the details
     $(".pizza").last().click(function() {
       $("#show-pizza").show();
-      $("#show-pizza h3").text(newPizza.name);
-      $("#size").text(inputSize);
-      $("#toppings").text(inputToppings);
-      $("#size-cost").text(getSizeCost(inputSize));
-      $("#toppings-cost").text(getTotalToppingCosts(inputToppings));
-      $("#pizza-total-cost").text(newPizza.getPizzaCost());
-
+      $("#show-pizza h4").text(newPizza.name);
+      $("#size").text(inputSize+"...");
+      $("#toppings").text(inputToppings+"...");
+      $("#size-cost").text(" $"+getSizeCost(inputSize));
+      $("#toppings-cost").text(" $"+getTotalToppingCosts(inputToppings));
+      $("#pizza-total-cost").text(" $"+newPizza.getPizzaCost());
     });
-
-
-
   });
 });
