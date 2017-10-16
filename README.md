@@ -8,7 +8,7 @@
 This application will provide a pizza company an order form where a user can choose
 one or more individual toppings and a pizza size to place an order and display the
 final cost. The user can submit any number of pizzas and the individual pizza details
-can be shown along with the total cost.
+can be shown along with the total cost in the summary sidebar.
 
 
 ## Specifications:
@@ -27,14 +27,13 @@ can be shown along with the total cost.
 Clone GitHub Repository:
 git clone https://github.com/jessicakenney/pizza-shop.git
 
+![Alt text](css/screenshot.png)
+
 ## Support and contact details
 *email jessicakenney@yahoo.com* with any questions.
 
 ## Known Issues/Bugs
-Images and Additional Styling added after 5pm deadline. Additional toppings
-also included while the functionality remained intact.
-
-In the Summary Sidebar, the 'Toppings' details runs into the main box 
+In the Summary Sidebar, the 'Toppings' details runs into the main box
  when there are many toppings selected for a given pizza.
 
 ## Technologies Used
